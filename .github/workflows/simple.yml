@@ -3,8 +3,8 @@ name: shell commands
 on: [push]
 
 jobs:
-    run-shell-command
-      runs-on: ubuntu-latest
+  run-shell-command
+    runs-on: ubuntu-latest
       steps:
         -name: checkout
          uses: actions/checkout@v3
