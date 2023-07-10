@@ -1,0 +1,21 @@
+name: terraform
+on: [push]
+
+jobs:
+    terraform:
+        runs-on: ubuntu-latest
+
+        defaults:
+            run:
+                shell: bash
+        steps:
+            - name: checkout
+              uses: actions/checkout@v3
+            - name: Setup_Terraform
+              uses: hashicorp/setup_terraform@v2
+              with:
+                terraform_version: 1.1.9
+            - name: init
+              run: terraform init
+            - name: fmt
+              run: terraform fmt    
