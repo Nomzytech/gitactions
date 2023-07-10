@@ -1,9 +1,9 @@
-name: shell-commands
+name: shell
 
 on: [push]
 
 jobs:
-run - shell
+run-shell
 runs-on: ubuntu-latest
 steps:
 -name: checkout
