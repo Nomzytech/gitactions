@@ -1,16 +1,13 @@
-name: shell
+name: shell command
 
 on: [push]
 
 jobs:
-run-shell
-runs-on: ubuntu-latest
-steps:
--name: checkout
-uses: actions/checkout@v3
--name: echo string
-run: echo "hello"
--name: multiline script
-run: |
-   node -v
-           pwd
+ run-windows-commands:
+    runs-on: windows-latest
+    steps:
+     - name: Directory
+       run: Get-location
+     - name: Directory using bash
+       run: pwd
+       shell: bash 
