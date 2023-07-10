@@ -13,6 +13,7 @@ jobs:
        shell: bash 
  run-shell-command:
     runs-on: ubuntu-latest
+    needs: ["run-windows-commands"]
     steps:
      - name: checkout
        uses: actions/checkout@v3
