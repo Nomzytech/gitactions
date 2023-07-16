@@ -1,0 +1,24 @@
+name: Terraform2
+on: [push]
+
+jobs: 
+    terraform:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+        steps:
+              - name: checkout
+                uses: actions/checkout@v3
+              - name: setup-terraform
+                uses: hashicorp/setup-terraform@v2
+                with: 
+                 terraform_version: 1.1.9
+              - name: init
+                run : terraform init
+              - name: fmt
+                run: terraform fmt
+              - name: validate
+                run: terraform validate
+              - name: plan
+                run: terraform plan
