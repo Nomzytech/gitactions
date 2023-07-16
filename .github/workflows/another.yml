@@ -2,7 +2,7 @@ name: testing
 on: [push]
 
 jobs:
-    run-testing:
+    run-new-script:
         runs-on: ubuntu-latest
         steps:
           - name: checkout
@@ -15,7 +15,6 @@ jobs:
 
     run-another-testing:
         runs-on: windows-latest
-        needs: ["testing"]
         steps:
           - name: Directory
             run: Get-Location
