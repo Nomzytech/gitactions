@@ -13,3 +13,12 @@ jobs:
             run: |
                 node -v
 
+    run-another-testing:
+        runs-on: windows-latest
+        steps:
+          - name: Directory
+            run: Get-Location
+          - name: Directory usung bash
+            run: pwd
+            shell: bash
+              
