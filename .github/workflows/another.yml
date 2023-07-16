@@ -15,10 +15,10 @@ jobs:
 
     run-another-testing:
         runs-on: windows-latest
+        needs: ["testing"]
         steps:
           - name: Directory
             run: Get-Location
           - name: Directory usung bash
             run: pwd
             shell: bash
-              
