@@ -18,4 +18,4 @@ jobs:
             - name: init
               run: terraform init
             - name: fmt
-              run: terraform fmt    
+              run: terraform fmt
