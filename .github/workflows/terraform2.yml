@@ -26,7 +26,7 @@ jobs:
                 run: terraform validate
               - name: plan
                 run: terraform plan
-              - name: apply
-                run: terraform apply -auto-approve
-              - name: destry
-                run: terraform destroy -auto-approve
+              - name: release
+                run: npx semantic-release
+                env:
+                    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
